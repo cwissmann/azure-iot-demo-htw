@@ -38,6 +38,7 @@ resource "azurerm_windows_function_app" "htw-backend" {
   site_config {}
 
   app_settings = {
-    "APPINSIGHTS_INSTRUMENTATIONKEY": azurerm_application_insights.htw-logging.instrumentation_key
+    "APPINSIGHTS_INSTRUMENTATIONKEY": azurerm_application_insights.htw-logging.instrumentation_key,
+    "IOT_EVENTHUB_ENDPOINT": "Endpoint=${azurerm_iothub.htw.event_hub_events_endpoint};SharedAccessKeyName=${azurerm_iothub_shared_access_policy.htw-service.name};SharedAccessKey=${azurerm_iothub_shared_access_policy.htw-service.primary_key};EntityPath=${azurerm_iothub.htw.event_hub_events_path}"
   }
 }
