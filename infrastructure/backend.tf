@@ -36,4 +36,8 @@ resource "azurerm_windows_function_app" "htw-backend" {
   }
 
   site_config {}
+
+  app_settings = {
+    "APPINSIGHTS_INSTRUMENTATIONKEY": azurerm_application_insights.htw-logging.instrumentation_key
+  }
 }
