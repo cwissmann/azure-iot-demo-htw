@@ -13,7 +13,6 @@ string deviceId = "[DEVICEID]";
 string iotHubHostName = "[IOTHUBHOSTNAME]";
 var deviceAuthentication = new DeviceAuthenticationWithRegistrySymmetricKey(deviceId, deviceKey);
 
-
 DeviceClient deviceClient = DeviceClient.Create(iotHubHostName, deviceAuthentication, TransportType.Mqtt);
 
 while (true)
