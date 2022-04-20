@@ -22,7 +22,10 @@ data "azurerm_client_config" "current" {
 data "azuread_client_config" "current" {
 }
 
-resource "azurerm_resource_group" "dev" {
+resource "azurerm_resource_group" "htw" {
   name     = var.resourceGroup
   location = var.location
+  tags = {
+    "Application" = "HTW-Demo"
+  }
 }
