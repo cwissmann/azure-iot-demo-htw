@@ -10,6 +10,12 @@ resource "azurerm_storage_account" "htw-backend" {
   }
 }
 
+resource "azurerm_storage_container" "htw-stream-analytics-job" {
+  name                  = "htw-stream-analytcs-job"
+  storage_account_name  = azurerm_storage_account.htw-backend.name
+  container_access_type = "private"
+}
+
 resource "azurerm_service_plan" "htw-backend" {
   name                = "${var.resourcePrefix}-backend-serviceplan"
   resource_group_name = azurerm_resource_group.htw.name

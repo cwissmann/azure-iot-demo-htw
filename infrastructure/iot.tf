@@ -20,3 +20,10 @@ resource "azurerm_iothub_shared_access_policy" "htw-service" {
 
   service_connect = true
 }
+
+resource "azurerm_iothub_consumer_group" "htw-stream" {
+  name                   = "htw-stream"
+  iothub_name            = azurerm_iothub.htw.name
+  eventhub_endpoint_name = "events"
+  resource_group_name    = azurerm_resource_group.htw.name
+}
