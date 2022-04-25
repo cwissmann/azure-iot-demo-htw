@@ -1,0 +1,18 @@
+[{
+    "messageId":2687,
+    "deviceId":"htwDevice01",
+    "temperature":34.6781061844539,
+    "humidity":79.34950580352374
+},
+{
+    "messageId":2686,
+    "deviceId":"htwDevice01",
+    "temperature":26.304596062419265,
+    "humidity":74.42383947006311
+},
+{
+    "messageId":2684,
+    "deviceId":"htwDevice01",
+    "temperature":24.742227706078296,
+    "humidity":63.02048770489252
+}]
