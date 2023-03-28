@@ -26,4 +26,8 @@ terraform init
 terraform plan -var-file="localsettings.tfvars"
 
 terraform apply -var-file="localsettings.tfvars"
+
+terraform plan -var-file="localsettings.tfvars" -destroy
+
+terraform apply -var-file="localsettings.tfvars" -destroy
 ```
